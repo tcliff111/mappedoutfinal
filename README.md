@@ -12,8 +12,9 @@ The following **required** functionality is completed:
 - [ ] Create new events and add members to event 
 - [ ] Settings page allows sharing of location services (privacy setting), logout 
 - [ ] Tabs on the bottom will direct a user to different view controllers (Profile, Map View, Settings page, Search friends)
-
+- [ ] WashU organizations have profiles to post their events publicly
 
 The following **optional** features are implemented:
 
-- [ ] Events will be imported from common WashU Facebook organizations
+
+- [ ] Calendar syncs to Calendar app
