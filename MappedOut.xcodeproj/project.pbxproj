@@ -12,6 +12,7 @@
 		467ADE1F1C8FA5F70011FBCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467ADE1D1C8FA5F70011FBCE /* Main.storyboard */; };
 		467ADE211C8FA5F70011FBCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467ADE201C8FA5F70011FBCE /* Assets.xcassets */; };
 		467ADE241C8FA5F70011FBCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467ADE221C8FA5F70011FBCE /* LaunchScreen.storyboard */; };
+		F213FD4F7E2F4C959151E5A4 /* Pods_MappedOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70B4C070715F2FC4A1F4BCD /* Pods_MappedOut.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		467ADE201C8FA5F70011FBCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		467ADE231C8FA5F70011FBCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467ADE251C8FA5F70011FBCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F13FE826CA5A2A0161675A7 /* Pods-MappedOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappedOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-MappedOut/Pods-MappedOut.release.xcconfig"; sourceTree = "<group>"; };
+		D70B4C070715F2FC4A1F4BCD /* Pods_MappedOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MappedOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F19200F4F697945CEF1A98BF /* Pods-MappedOut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappedOut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MappedOut/Pods-MappedOut.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F213FD4F7E2F4C959151E5A4 /* Pods_MappedOut.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FEDA1C3EF45F6AD6684E586 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F19200F4F697945CEF1A98BF /* Pods-MappedOut.debug.xcconfig */,
+				7F13FE826CA5A2A0161675A7 /* Pods-MappedOut.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		467ADE0D1C8FA5F70011FBCE = {
 			isa = PBXGroup;
 			children = (
 				467ADE181C8FA5F70011FBCE /* MappedOut */,
 				467ADE171C8FA5F70011FBCE /* Products */,
+				0FEDA1C3EF45F6AD6684E586 /* Pods */,
+				5AFD6C5FD0B523FACD78C239 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = MappedOut;
 			sourceTree = "<group>";
 		};
+		5AFD6C5FD0B523FACD78C239 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D70B4C070715F2FC4A1F4BCD /* Pods_MappedOut.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 467ADE281C8FA5F70011FBCE /* Build configuration list for PBXNativeTarget "MappedOut" */;
 			buildPhases = (
+				C5EC9B20B667B1B6022C90B9 /* Check Pods Manifest.lock */,
 				467ADE121C8FA5F70011FBCE /* Sources */,
 				467ADE131C8FA5F70011FBCE /* Frameworks */,
 				467ADE141C8FA5F70011FBCE /* Resources */,
+				BAF49D3C6686079C3DFD94E8 /* Embed Pods Frameworks */,
+				3ABA3F2B20DB70B5F44395CF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +123,6 @@
 				TargetAttributes = {
 					467ADE151C8FA5F70011FBCE = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = XL6RWC8XC2;
 					};
 				};
 			};
@@ -130,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3ABA3F2B20DB70B5F44395CF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MappedOut/Pods-MappedOut-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAF49D3C6686079C3DFD94E8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MappedOut/Pods-MappedOut-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5EC9B20B667B1B6022C90B9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		467ADE121C8FA5F70011FBCE /* Sources */ = {
@@ -246,8 +320,10 @@
 		};
 		467ADE291C8FA5F70011FBCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F19200F4F697945CEF1A98BF /* Pods-MappedOut.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MappedOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP.MappedOut;
@@ -257,8 +333,10 @@
 		};
 		467ADE2A1C8FA5F70011FBCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F13FE826CA5A2A0161675A7 /* Pods-MappedOut.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MappedOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP.MappedOut;
@@ -285,6 +363,7 @@
 				467ADE2A1C8FA5F70011FBCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
