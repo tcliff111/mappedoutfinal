@@ -1,0 +1,20 @@
+
+Models: User, Event
+
+User attributes:
+-Username (String): User.username
+-Name (String): User.name
+-Profile Picture (PFImageView): User.propic
+-Events attending (NSDictionary): User.eventsAttending
+-Location (CLLocation): User.location
+
+Event attributes:
+-Name (String): Event.name
+-Owner Name (String): Event.ownerName
+-Owner ID (String): Event.ownerID
+-Description (String): Event.description
+-Location (CLLocation): Event.location
+-Number Attending (Int): Event.attendanceCount
+-User ID Array of those Attending ([String]): Event.usersAttending
+-Picture (PFImageView): Event.picture
+-Date of Event: Event.date
