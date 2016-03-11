@@ -24,3 +24,5 @@ Event attributes:
 -Picture (PFImageView): Event.picture
 -Date of Event (NSDate): Event.date
 -ID (String): Event.id
+-Is Public (boolean): Event.isPublic
+-Invite ID (String): Event.inviteID
