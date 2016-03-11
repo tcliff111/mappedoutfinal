@@ -11,6 +11,7 @@ User attributes:
 -Location (CLLocation): User.location
 -Friend Names ([String]): User.friendNames
 -Friend IDs ([String]): User.friendIDs
+-ID (String): User.id
 
 Event attributes:
 -Name (String): Event.name
@@ -22,3 +23,4 @@ Event attributes:
 -User ID Array of those Attending ([String]): Event.usersAttending
 -Picture (PFImageView): Event.picture
 -Date of Event (NSDate): Event.date
+-ID (String): Event.id
