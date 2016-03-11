@@ -4,7 +4,10 @@
 use_frameworks!
 
 target 'MappedOut' do
-	pod ‘Parse’
-	pod ‘ParseUI’
+	pod 'Parse'
+	pod 'ParseUI'
+	pod 'TKSubmitTransition'
+    pod 'TextFieldEffects'
+    pod 'SwiftyDrop'
 end
 

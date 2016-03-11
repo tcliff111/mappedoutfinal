@@ -12,6 +12,10 @@
 		467ADE1F1C8FA5F70011FBCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467ADE1D1C8FA5F70011FBCE /* Main.storyboard */; };
 		467ADE211C8FA5F70011FBCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467ADE201C8FA5F70011FBCE /* Assets.xcassets */; };
 		467ADE241C8FA5F70011FBCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467ADE221C8FA5F70011FBCE /* LaunchScreen.storyboard */; };
+		5C6BF47A1C8FA7760072B2E7 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BF4791C8FA7760072B2E7 /* loginViewController.swift */; };
+		5C6BF47E1C9007470072B2E7 /* CoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BF47D1C9007470072B2E7 /* CoreViewController.swift */; };
+		5C6BF4801C91E99D0072B2E7 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BF47F1C91E99D0072B2E7 /* NSTimerEx.swift */; };
+		5C6BF5C41C9214E20072B2E7 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BF5C31C9214E20072B2E7 /* MyTabBarController.swift */; };
 		F213FD4F7E2F4C959151E5A4 /* Pods_MappedOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70B4C070715F2FC4A1F4BCD /* Pods_MappedOut.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,10 @@
 		467ADE201C8FA5F70011FBCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		467ADE231C8FA5F70011FBCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467ADE251C8FA5F70011FBCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C6BF4791C8FA7760072B2E7 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		5C6BF47D1C9007470072B2E7 /* CoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreViewController.swift; sourceTree = "<group>"; };
+		5C6BF47F1C91E99D0072B2E7 /* NSTimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerEx.swift; sourceTree = "<group>"; };
+		5C6BF5C31C9214E20072B2E7 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		7F13FE826CA5A2A0161675A7 /* Pods-MappedOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappedOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-MappedOut/Pods-MappedOut.release.xcconfig"; sourceTree = "<group>"; };
 		D70B4C070715F2FC4A1F4BCD /* Pods_MappedOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MappedOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19200F4F697945CEF1A98BF /* Pods-MappedOut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappedOut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MappedOut/Pods-MappedOut.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,7 +80,11 @@
 			children = (
 				467ADE191C8FA5F70011FBCE /* AppDelegate.swift */,
 				467ADE1B1C8FA5F70011FBCE /* ViewController.swift */,
+				5C6BF47D1C9007470072B2E7 /* CoreViewController.swift */,
+				5C6BF4791C8FA7760072B2E7 /* loginViewController.swift */,
 				467ADE1D1C8FA5F70011FBCE /* Main.storyboard */,
+				5C6BF5C31C9214E20072B2E7 /* MyTabBarController.swift */,
+				5C6BF47F1C91E99D0072B2E7 /* NSTimerEx.swift */,
 				467ADE201C8FA5F70011FBCE /* Assets.xcassets */,
 				467ADE221C8FA5F70011FBCE /* LaunchScreen.storyboard */,
 				467ADE251C8FA5F70011FBCE /* Info.plist */,
@@ -212,6 +224,10 @@
 			files = (
 				467ADE1C1C8FA5F70011FBCE /* ViewController.swift in Sources */,
 				467ADE1A1C8FA5F70011FBCE /* AppDelegate.swift in Sources */,
+				5C6BF47A1C8FA7760072B2E7 /* loginViewController.swift in Sources */,
+				5C6BF4801C91E99D0072B2E7 /* NSTimerEx.swift in Sources */,
+				5C6BF47E1C9007470072B2E7 /* CoreViewController.swift in Sources */,
+				5C6BF5C41C9214E20072B2E7 /* MyTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
