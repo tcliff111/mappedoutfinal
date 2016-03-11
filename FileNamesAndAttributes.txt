@@ -7,6 +7,8 @@ User attributes:
 -Profile Picture (PFImageView): User.propic
 -Events attending (NSDictionary): User.eventsAttending
 -Location (CLLocation): User.location
+-Friend Names ([String]): User.friendNames
+-Friend IDs ([String]): User.friendIDs
 
 Event attributes:
 -Name (String): Event.name
