@@ -2,10 +2,12 @@
 Models: User, Event
 
 User attributes:
+-Current User (class var User): User.currentUser
 -Username (String): User.username
 -Name (String): User.name
 -Profile Picture (PFImageView): User.propic
--Events attending (NSDictionary): User.eventsAttending
+-IDs of Events Attending ([String]): User.eventsAttending
+-IDs of Events Owned ([String]): User.eventsOwned
 -Location (CLLocation): User.location
 -Friend Names ([String]): User.friendNames
 -Friend IDs ([String]): User.friendIDs
@@ -19,4 +21,4 @@ Event attributes:
 -Number Attending (Int): Event.attendanceCount
 -User ID Array of those Attending ([String]): Event.usersAttending
 -Picture (PFImageView): Event.picture
--Date of Event: Event.date
+-Date of Event (NSDate): Event.date
