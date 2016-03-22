@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '80B4C5C021880647473795C0'
+               BlueprintIdentifier = '2D89E9BDCB67273BE6AD0956'
                BlueprintName = 'Pods-MappedOut'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_MappedOut.framework'>

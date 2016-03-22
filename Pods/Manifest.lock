@@ -1,5 +1,7 @@
 PODS:
   - Bolts/Tasks (1.6.0)
+  - BubbleTransition (1.0.1)
+  - FSCalendar (2.0.0)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
   - ParseUI (1.2.0):
@@ -10,6 +12,8 @@ PODS:
   - TKSubmitTransition (0.3)
 
 DEPENDENCIES:
+  - BubbleTransition
+  - FSCalendar
   - Parse
   - ParseUI
   - SwiftyDrop
@@ -18,6 +22,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: f52a250053bb517ca874523c3913776359ab3def
+  BubbleTransition: 76d5e306dbda0f622260ea7d082c971d976422ab
+  FSCalendar: 4ba2af4127fb4af4a0d04c0872db643973345c82
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
   SwiftyDrop: 54a30c4edd51be9863429c3ad2ad4108eb7b7814

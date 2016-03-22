@@ -9,5 +9,7 @@ target 'MappedOut' do
 	pod 'TKSubmitTransition'
     pod 'TextFieldEffects'
     pod 'SwiftyDrop'
+    pod 'BubbleTransition'
+    pod 'FSCalendar'
 end
 

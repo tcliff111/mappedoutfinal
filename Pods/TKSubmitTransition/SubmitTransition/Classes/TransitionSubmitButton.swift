@@ -93,7 +93,7 @@ public class TKTransitionSubmitButton : UIButton, UIViewControllerTransitioningD
         startFinishAnimation(duration, completion: completion)
     }
 
-    public override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
+    public override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         let a = anim as! CABasicAnimation
         if a.keyPath == "transform.scale" {
             didEndFinishAnimation?()

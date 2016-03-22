@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BubbleTransition.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FSCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,22 +52,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>30B1CBED8DB61A25E3BA1E159CCC81D4</key>
+		<key>545E10AB92FE3A245F78BC39F25DD9F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>600DA5EA684363FAE2EA1EDC0A4A6EA7</key>
+		<key>7372CA79CE92E7AC032175441663EBE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E162961AEBF76F9CA12A63909B4DEBA</key>
+		<key>7E2ECCF636F30F47CA31F4C2DC423C2C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A786A75681D7B3043EE29E7771F3AD04</key>
+		<key>AC5C84BC2F641E1CCA28A64FA32C74D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BCA053B6430690326435042FEB61B458</key>
+		<key>B02537F085B5C4EF15E462C398DB005B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D7FF8C25E9C55BBD0E463605A31B4C2C</key>
+		<key>B2619B2813D910DBC9FE9714E0788D55</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BCA053B6430690326435042FEB61B458</key>
 		<dict>
 			<key>primary</key>
 			<true/>

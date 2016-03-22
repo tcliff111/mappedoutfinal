@@ -16,6 +16,11 @@
 		5C6BF47E1C9007470072B2E7 /* CoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BF47D1C9007470072B2E7 /* CoreViewController.swift */; };
 		5C6BF4801C91E99D0072B2E7 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BF47F1C91E99D0072B2E7 /* NSTimerEx.swift */; };
 		5C6BF5C41C9214E20072B2E7 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BF5C31C9214E20072B2E7 /* MyTabBarController.swift */; };
+		5C6BF5C61C927D980072B2E7 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BF5C51C927D980072B2E7 /* images.png */; };
+		5C6BF5C81C92A3230072B2E7 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BF5C71C92A3230072B2E7 /* avatar.jpg */; };
+		5C6BF5CA1C92A5F60072B2E7 /* IMG_2932.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BF5C91C92A5F60072B2E7 /* IMG_2932.png */; };
+		5CE571B51C9DEE500022A83D /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE571B41C9DEE500022A83D /* CreateViewController.swift */; };
+		5CE571B71C9E7CCE0022A83D /* EventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE571B61C9E7CCE0022A83D /* EventsCell.swift */; };
 		F213FD4F7E2F4C959151E5A4 /* Pods_MappedOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70B4C070715F2FC4A1F4BCD /* Pods_MappedOut.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,11 @@
 		5C6BF47D1C9007470072B2E7 /* CoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreViewController.swift; sourceTree = "<group>"; };
 		5C6BF47F1C91E99D0072B2E7 /* NSTimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerEx.swift; sourceTree = "<group>"; };
 		5C6BF5C31C9214E20072B2E7 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		5C6BF5C51C927D980072B2E7 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
+		5C6BF5C71C92A3230072B2E7 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		5C6BF5C91C92A5F60072B2E7 /* IMG_2932.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2932.png; sourceTree = "<group>"; };
+		5CE571B41C9DEE500022A83D /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		5CE571B61C9E7CCE0022A83D /* EventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCell.swift; sourceTree = "<group>"; };
 		7F13FE826CA5A2A0161675A7 /* Pods-MappedOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappedOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-MappedOut/Pods-MappedOut.release.xcconfig"; sourceTree = "<group>"; };
 		D70B4C070715F2FC4A1F4BCD /* Pods_MappedOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MappedOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19200F4F697945CEF1A98BF /* Pods-MappedOut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappedOut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MappedOut/Pods-MappedOut.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +93,11 @@
 				5C6BF47D1C9007470072B2E7 /* CoreViewController.swift */,
 				5C6BF4791C8FA7760072B2E7 /* loginViewController.swift */,
 				467ADE1D1C8FA5F70011FBCE /* Main.storyboard */,
+				5CE571B61C9E7CCE0022A83D /* EventsCell.swift */,
+				5CE571B41C9DEE500022A83D /* CreateViewController.swift */,
+				5C6BF5C91C92A5F60072B2E7 /* IMG_2932.png */,
+				5C6BF5C51C927D980072B2E7 /* images.png */,
+				5C6BF5C71C92A3230072B2E7 /* avatar.jpg */,
 				5C6BF5C31C9214E20072B2E7 /* MyTabBarController.swift */,
 				5C6BF47F1C91E99D0072B2E7 /* NSTimerEx.swift */,
 				467ADE201C8FA5F70011FBCE /* Assets.xcassets */,
@@ -135,6 +150,7 @@
 				TargetAttributes = {
 					467ADE151C8FA5F70011FBCE = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = B3S26V72VC;
 					};
 				};
 			};
@@ -162,8 +178,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				467ADE241C8FA5F70011FBCE /* LaunchScreen.storyboard in Resources */,
+				5C6BF5CA1C92A5F60072B2E7 /* IMG_2932.png in Resources */,
+				5C6BF5C81C92A3230072B2E7 /* avatar.jpg in Resources */,
 				467ADE211C8FA5F70011FBCE /* Assets.xcassets in Resources */,
 				467ADE1F1C8FA5F70011FBCE /* Main.storyboard in Resources */,
+				5C6BF5C61C927D980072B2E7 /* images.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,8 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE571B71C9E7CCE0022A83D /* EventsCell.swift in Sources */,
 				467ADE1C1C8FA5F70011FBCE /* ViewController.swift in Sources */,
 				467ADE1A1C8FA5F70011FBCE /* AppDelegate.swift in Sources */,
+				5CE571B51C9DEE500022A83D /* CreateViewController.swift in Sources */,
 				5C6BF47A1C8FA7760072B2E7 /* loginViewController.swift in Sources */,
 				5C6BF4801C91E99D0072B2E7 /* NSTimerEx.swift in Sources */,
 				5C6BF47E1C9007470072B2E7 /* CoreViewController.swift in Sources */,
@@ -340,10 +361,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MappedOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP.MappedOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -353,10 +376,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MappedOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CP.MappedOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
