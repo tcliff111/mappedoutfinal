@@ -12,7 +12,8 @@ import ParseUI
 
 class Event: NSObject {
     
-
+    //Not yet finished
+    
     var name: String?
     var ownerName: String?
     var ownerID: String?
@@ -30,7 +31,7 @@ class Event: NSObject {
     
     init(event: PFObject) {
         super.init()
-        self.id = event["id"] as? String
+        self.id = event.objectId
 
         self.name = event["name"] as? String
         self.ownerName = event["ownerName"] as? String
@@ -64,7 +65,7 @@ class Event: NSObject {
         self.isPublic = isPublic
         self.attendanceCount! += 1
         Event.postEvent(self) { (eventObj: PFObject) -> () in
-            self.id = eventObj["id"] as? String
+            self.id = eventObj.objectId
         }
     }
     
