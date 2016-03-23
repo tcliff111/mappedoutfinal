@@ -10,31 +10,60 @@ import UIKit
 import Parse
 import ParseUI
 
-class User: NSObject {
+class User: PFUser {
 
-    //Not yet finished.  Currently hard-coded.
+    //Not yet finished
+    
+    //User inherits the properties username, password, and objectId from PFUser
     
     var name: String?
-    var username: String?
-    var propic: PFImageView?
+    var propic: UIImage?
     var eventsAttending: [String]?
     var eventsOwned: [String]?
     var location: CLLocation?
-    var friendNames: [String]?
+    var friendsCount: Int = 0
+    var friendNames: [String]? {
+        didSet{
+            friendsCount = (friendNames?.count)!
+        }
+    }
     var friendIDs: [String]?
-    var id: String?
     
-
-//    init(user: PFUser) {
+    
     override init() {
         super.init()
-//        self.username = user["username"] as! String
-        self.username = "johnny"
-        self.name = "John"
-        self.id = "23u4huhrh"
     }
     
+    //User inherits the functions login() and register() from PFUser
     
+//    override func login() {
+//        super.login()
+        
+//    }
+    
+
+    func updateProfile(name: String?, picture: UIImage?) {
+        if let name = name {
+            self.name = name
+        }
+        if let picture = picture {
+            self.propic = picture
+        }
+    }
+    
+    func addFriend() {
+        
+    }
+    
+    func getFriends() {
+        
+    }
+    
+    func searchUsers(usernameSubstring: String) -> [User]? {
+        
+        let users: [User] = []
+        return users
+    }
     
     
 }
