@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -159,7 +159,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lingsheng Lyu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYL-2m-eUz">
-                                <rect key="frame" x="237" y="120" width="128" height="24"/>
+                                <rect key="frame" x="236" y="120" width="128" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -238,7 +238,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pTC-iv-kNT" id="IJH-8W-UQS">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Th-n2-oIP">
@@ -335,7 +335,7 @@
             </objects>
             <point key="canvasLocation" x="2149" y="419"/>
         </scene>
-        <!--Create View Controller-->
+        <!--Title-->
         <scene sceneID="S57-xA-7yz">
             <objects>
                 <viewController id="eT2-dC-HbG" customClass="CreateViewController" customModule="MappedOut" customModuleProvider="target" sceneMemberID="viewController">
@@ -362,14 +362,129 @@
                                     <action selector="closeAction:" destination="eT2-dC-HbG" eventType="touchUpInside" id="uC5-iK-h66"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ps-E5-nYk">
+                                <rect key="frame" x="460" y="486" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="KT3-cY-Ht1"/>
+                                    <constraint firstAttribute="height" constant="50" id="klv-wD-N9S"/>
+                                </constraints>
+                                <state key="normal" image="Done">
+                                    <color key="titleColor" red="0.73333333329999995" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeAction:" destination="eT2-dC-HbG" eventType="touchUpInside" id="t69-xv-3OZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lpj-TJ-8g1" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="60" y="50" width="460" height="45"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="QdI-Wp-0uo"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.51372549020000002" green="0.83921568629999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ic-Zv-9tu" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="60" y="306" width="460" height="45"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.51372549020000002" green="0.83921568629999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Discription" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ViU-MG-xP7" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="60" y="369" width="460" height="45"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.51372549020000002" green="0.83921568629999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="aeo-eZ-Ftc">
+                                <rect key="frame" x="0.0" y="150" width="600" height="150"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="NQG-l5-ngl"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="480386067.90934002">
+                                    <!--2016-03-23 00:34:27 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="284036400">
+                                    <!--2010-01-01 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0c-Qe-CRn">
+                                <rect key="frame" x="60" y="135" width="30" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzw-vo-KJm">
+                                <rect key="frame" x="355" y="132" width="151" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.73333333329999995" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fA4-lv-gCe" firstAttribute="top" secondItem="xg6-FN-w9v" secondAttribute="bottom" constant="30" id="Aze-WC-6ZS"/>
+                            <constraint firstItem="F0c-Qe-CRn" firstAttribute="leading" secondItem="o7F-9C-oBv" secondAttribute="leadingMargin" constant="40" id="BxO-Bq-S8B"/>
+                            <constraint firstItem="xg6-FN-w9v" firstAttribute="leading" secondItem="4Ps-E5-nYk" secondAttribute="trailing" constant="20" id="EOg-5G-tAE"/>
                             <constraint firstAttribute="trailing" secondItem="xg6-FN-w9v" secondAttribute="trailing" constant="20" id="G4P-LP-RFP"/>
                             <constraint firstItem="fA4-lv-gCe" firstAttribute="top" secondItem="xg6-FN-w9v" secondAttribute="bottom" constant="64" id="KCG-VN-b1Z"/>
+                            <constraint firstItem="Lpj-TJ-8g1" firstAttribute="leading" secondItem="o7F-9C-oBv" secondAttribute="leadingMargin" constant="40" id="RLW-WU-yWd"/>
+                            <constraint firstItem="aeo-eZ-Ftc" firstAttribute="top" secondItem="Lpj-TJ-8g1" secondAttribute="bottom" constant="55" id="RQY-PO-5GY"/>
+                            <constraint firstItem="aeo-eZ-Ftc" firstAttribute="leading" secondItem="o7F-9C-oBv" secondAttribute="leadingMargin" constant="-20" id="TTo-pz-2Os"/>
+                            <constraint firstItem="4Ps-E5-nYk" firstAttribute="top" secondItem="xg6-FN-w9v" secondAttribute="top" id="Uwf-zS-UPw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aeo-eZ-Ftc" secondAttribute="trailing" constant="-20" id="X8B-fW-ZsS"/>
+                            <constraint firstItem="F0c-Qe-CRn" firstAttribute="top" secondItem="Lpj-TJ-8g1" secondAttribute="bottom" constant="40" id="dzi-YR-aYJ"/>
                             <constraint firstAttribute="trailing" secondItem="xg6-FN-w9v" secondAttribute="trailing" constant="20" id="ivc-Lx-YZm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lpj-TJ-8g1" secondAttribute="trailing" constant="60" id="jMh-iP-TLF"/>
                             <constraint firstItem="xg6-FN-w9v" firstAttribute="trailing" secondItem="o7F-9C-oBv" secondAttribute="trailingMargin" id="scN-6I-Agx"/>
+                            <constraint firstItem="Lpj-TJ-8g1" firstAttribute="top" secondItem="30K-b3-QQ9" secondAttribute="bottom" constant="30" id="tbc-Ya-7Mp"/>
                             <constraint firstItem="fA4-lv-gCe" firstAttribute="top" secondItem="xg6-FN-w9v" secondAttribute="bottom" constant="30" id="y1B-Ga-Eiq"/>
                         </constraints>
                         <variation key="default">
@@ -381,13 +496,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="3s3-5g-OYL"/>
                     <connections>
                         <outlet property="closeButton" destination="xg6-FN-w9v" id="02E-H4-ENa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDO-XA-YbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2803" y="419"/>
+            <point key="canvasLocation" x="2815" y="411"/>
         </scene>
         <!--Item-->
         <scene sceneID="Ix8-8h-OuB">
@@ -474,6 +590,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Done" width="50" height="50"/>
         <image name="IMG_2932.png" width="3264" height="2448"/>
         <image name="Lock" width="25" height="25"/>
         <image name="User" width="25" height="25"/>

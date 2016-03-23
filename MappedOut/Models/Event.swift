@@ -59,7 +59,7 @@ class Event: NSObject {
 //        self.picture = picture
         self.date = date
         self.isPublic = isPublic
-        self.attendanceCount!++
+        self.attendanceCount!+=1
         Event.postEvent(self) { (success: Bool, error: NSError?) -> Void in
             if(success) {
                 //Still must setup id and inviteID
@@ -131,7 +131,7 @@ class Event: NSObject {
     
     class func addAttendee(user: User, event: Event) {
         //Does not account for the user side
-        event.attendanceCount!++
+        event.attendanceCount! += 1
 //        event.usersAttending?.append(user.id!)
     }
     

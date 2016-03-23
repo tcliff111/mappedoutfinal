@@ -19,6 +19,8 @@
 		5C6BF5C61C927D980072B2E7 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BF5C51C927D980072B2E7 /* images.png */; };
 		5C6BF5C81C92A3230072B2E7 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BF5C71C92A3230072B2E7 /* avatar.jpg */; };
 		5C6BF5CA1C92A5F60072B2E7 /* IMG_2932.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BF5C91C92A5F60072B2E7 /* IMG_2932.png */; };
+		5C9C52D81CA20C4B002D7A79 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C52D61CA20C4B002D7A79 /* Event.swift */; };
+		5C9C52D91CA20C4B002D7A79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9C52D71CA20C4B002D7A79 /* User.swift */; };
 		5CE571B51C9DEE500022A83D /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE571B41C9DEE500022A83D /* CreateViewController.swift */; };
 		5CE571B71C9E7CCE0022A83D /* EventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE571B61C9E7CCE0022A83D /* EventsCell.swift */; };
 		F213FD4F7E2F4C959151E5A4 /* Pods_MappedOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70B4C070715F2FC4A1F4BCD /* Pods_MappedOut.framework */; };
@@ -39,6 +41,8 @@
 		5C6BF5C51C927D980072B2E7 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		5C6BF5C71C92A3230072B2E7 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
 		5C6BF5C91C92A5F60072B2E7 /* IMG_2932.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2932.png; sourceTree = "<group>"; };
+		5C9C52D61CA20C4B002D7A79 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		5C9C52D71CA20C4B002D7A79 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5CE571B41C9DEE500022A83D /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		5CE571B61C9E7CCE0022A83D /* EventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCell.swift; sourceTree = "<group>"; };
 		7F13FE826CA5A2A0161675A7 /* Pods-MappedOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MappedOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-MappedOut/Pods-MappedOut.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		467ADE181C8FA5F70011FBCE /* MappedOut */ = {
 			isa = PBXGroup;
 			children = (
+				5C9C52D51CA20C4B002D7A79 /* Models */,
 				467ADE191C8FA5F70011FBCE /* AppDelegate.swift */,
 				467ADE1B1C8FA5F70011FBCE /* ViewController.swift */,
 				5C6BF47D1C9007470072B2E7 /* CoreViewController.swift */,
@@ -113,6 +118,15 @@
 				D70B4C070715F2FC4A1F4BCD /* Pods_MappedOut.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C9C52D51CA20C4B002D7A79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C9C52D61CA20C4B002D7A79 /* Event.swift */,
+				5C9C52D71CA20C4B002D7A79 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,12 +256,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CE571B71C9E7CCE0022A83D /* EventsCell.swift in Sources */,
+				5C9C52D81CA20C4B002D7A79 /* Event.swift in Sources */,
 				467ADE1C1C8FA5F70011FBCE /* ViewController.swift in Sources */,
 				467ADE1A1C8FA5F70011FBCE /* AppDelegate.swift in Sources */,
 				5CE571B51C9DEE500022A83D /* CreateViewController.swift in Sources */,
 				5C6BF47A1C8FA7760072B2E7 /* loginViewController.swift in Sources */,
 				5C6BF4801C91E99D0072B2E7 /* NSTimerEx.swift in Sources */,
 				5C6BF47E1C9007470072B2E7 /* CoreViewController.swift in Sources */,
+				5C9C52D91CA20C4B002D7A79 /* User.swift in Sources */,
 				5C6BF5C41C9214E20072B2E7 /* MyTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
