@@ -56,8 +56,8 @@ class Event: NSObject {
         super.init()
         self.name = name
         self.ownerName = owner.name
-        self.ownerID = owner.id
-        self.usersAttending.append(owner.id!)
+        self.ownerID = owner.objectId
+        self.usersAttending.append(owner.objectId!)
         self.descript = description
         self.location = location
         self.picture = picture
@@ -138,7 +138,7 @@ class Event: NSObject {
     class func addAttendee(user: User, event: Event) {
         //Does not account for the user side
         event.attendanceCount! += 1
-        event.usersAttending.append(user.id!)
+        event.usersAttending.append(user.objectId!)
     }
     
     
