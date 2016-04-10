@@ -1,18 +1,39 @@
 PODS:
   - Bolts/Tasks (1.6.0)
-  - Parse (1.12.0):
-    - Bolts/Tasks (~> 1.5)
+  - BubbleTransition (1.0.3)
+  - DateSuger (0.1.1)
+  - FSCalendar (2.0.1)
+  - GoogleMaps (1.13.0)
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
   - ParseUI (1.2.0):
     - Bolts/Tasks (~> 1.3)
     - Parse (~> 1.9)
+  - SwiftyDrop (2.4.1)
+  - TextFieldEffects (1.2.0)
+  - TKSubmitTransition (0.3)
 
 DEPENDENCIES:
+  - BubbleTransition
+  - DateSuger
+  - FSCalendar
+  - GoogleMaps
   - Parse
   - ParseUI
+  - SwiftyDrop
+  - TextFieldEffects
+  - TKSubmitTransition
 
 SPEC CHECKSUMS:
   Bolts: f52a250053bb517ca874523c3913776359ab3def
-  Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  BubbleTransition: a7ae6678721406d60f604cbbea1ace505563119d
+  DateSuger: a49524bc74e3ca87eba7e575c98e4e3c87f5262c
+  FSCalendar: 18117308f5876a8f6f0fe572085d543580c2c5e5
+  GoogleMaps: 7a6caeb8336d7cb42982e969fc9b1b20a889fe79
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
+  SwiftyDrop: 54a30c4edd51be9863429c3ad2ad4108eb7b7814
+  TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
+  TKSubmitTransition: 6634e4fb07288db861b66d70fa4c4a7b96d0e6b2
 
 COCOAPODS: 0.39.0

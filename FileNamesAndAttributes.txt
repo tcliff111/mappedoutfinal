@@ -1,0 +1,28 @@
+
+Models: User, Event
+
+User attributes:
+-Current User (class var User): User.currentUser
+-Username (String): User.username
+-Name (String): User.name
+-Profile Picture (PFImageView): User.propic
+-IDs of Events Attending ([String]): User.eventsAttending
+-IDs of Events Owned ([String]): User.eventsOwned
+-Location (CLLocation): User.location
+-Friend Names ([String]): User.friendNames
+-Friend IDs ([String]): User.friendIDs
+-ID (String): User.id
+
+Event attributes:
+-Name (String): Event.name
+-Owner Name (String): Event.ownerName
+-Owner ID (String): Event.ownerID
+-Description (String): Event.description
+-Location (CLLocation): Event.location
+-Number Attending (Int): Event.attendanceCount
+-User ID Array of those Attending ([String]): Event.usersAttending
+-Picture (PFImageView): Event.picture
+-Date of Event (NSDate): Event.date
+-ID (String): Event.id
+-Is Public (boolean): Event.isPublic
+-Invite ID (String): Event.inviteID
