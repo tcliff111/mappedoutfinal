@@ -11,5 +11,7 @@ target 'MappedOut' do
     pod 'SwiftyDrop'
     pod 'BubbleTransition'
     pod 'FSCalendar'
+    pod 'DateSuger'
+    pod 'GoogleMaps'
 end
 

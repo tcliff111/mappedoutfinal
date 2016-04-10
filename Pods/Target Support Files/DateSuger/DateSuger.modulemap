@@ -1,0 +1,6 @@
+framework module DateSuger {
+  umbrella header "DateSuger-umbrella.h"
+
+  export *
+  module * { export * }
+}

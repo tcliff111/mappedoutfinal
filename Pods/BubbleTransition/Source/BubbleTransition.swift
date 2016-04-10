@@ -56,6 +56,7 @@ public class BubbleTransition: NSObject {
     
     /**
     The transition direction. Possible values `.Present`, `.Dismiss` or `.Pop`
+     Defaults to `.Present`
     */
     public var transitionMode: BubbleTransitionMode = .Present
     
@@ -64,11 +65,14 @@ public class BubbleTransition: NSObject {
     */
     public var bubbleColor: UIColor = .whiteColor()
     
-    private var bubble = UIView()
+    public private(set) var bubble = UIView()
 
     /**
     The possible directions of the transition.
-    Possible values `.Present`, `.Dismiss` or `.Pop`
+     
+     - Present: For presenting a new modal controller
+     - Dismiss: For dismissing the current controller
+     - Pop: For a pop animation in a navigation controller
     */
     @objc public enum BubbleTransitionMode: Int {
         case Present, Dismiss, Pop
@@ -141,6 +145,7 @@ extension BubbleTransition: UIViewControllerAnimatedTransitioning {
                     containerView.insertSubview(self.bubble, belowSubview: returningControllerView)
                 }
                 }) { (_) in
+                    returningControllerView.center = originalCenter;
                     returningControllerView.removeFromSuperview()
                     self.bubble.removeFromSuperview()
                     transitionContext.completeTransition(true)

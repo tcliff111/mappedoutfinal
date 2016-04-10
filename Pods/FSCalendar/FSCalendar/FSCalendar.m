@@ -36,9 +36,9 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 - (UIColor *)preferredTitleSelectionColorForDate:(NSDate *)date;
 - (UIColor *)preferredSubtitleDefaultColorForDate:(NSDate *)date;
 - (UIColor *)preferredSubtitleSelectionColorForDate:(NSDate *)date;
-- (UIColor *)preferredEventColorForDate:(NSDate *)date;
 - (UIColor *)preferredBorderDefaultColorForDate:(NSDate *)date;
 - (UIColor *)preferredBorderSelectionColorForDate:(NSDate *)date;
+- (id)preferredEventColorForDate:(NSDate *)date;
 - (FSCalendarCellShape)preferredCellShapeForDate:(NSDate *)date;
 
 - (BOOL)shouldSelectDate:(NSDate *)date;
@@ -94,7 +94,6 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 @property (readonly, nonatomic) id<FSCalendarDelegateAppearance> delegateAppearance;
 
 - (void)orientationDidChange:(NSNotification *)notification;
-- (void)significantTimeDidChange:(NSNotification *)notification;
 
 - (NSDate *)dateForIndexPath:(NSIndexPath *)indexPath;
 - (NSDate *)dateForIndexPath:(NSIndexPath *)indexPath scope:(FSCalendarScope)scope;
@@ -253,7 +252,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     self.animator.collectionViewLayout = self.collectionViewLayout;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(significantTimeDidChange:) name:UIApplicationSignificantTimeChangeNotification object:nil];
+    
 }
 
 - (void)dealloc
@@ -262,7 +261,6 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     _collectionView.dataSource = nil;
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationSignificantTimeChangeNotification object:nil];
 }
 
 #pragma mark - Overriden methods
@@ -697,11 +695,6 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 - (void)orientationDidChange:(NSNotification *)notification
 {
     self.orientation = self.currentCalendarOrientation;
-}
-
-- (void)significantTimeDidChange:(NSNotification *)notification
-{
-    self.today = [NSDate date];
 }
 
 #pragma mark - Properties
@@ -1744,11 +1737,19 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     return nil;
 }
 
-- (UIColor *)preferredEventColorForDate:(NSDate *)date
+- (id)preferredEventColorForDate:(NSDate *)date
 {
+    if (self.delegateAppearance && [self.delegateAppearance respondsToSelector:@selector(calendar:appearance:eventColorsForDate:)]) {
+        NSArray *colors = [self.delegateAppearance calendar:self appearance:self.appearance eventColorsForDate:date];
+        if (colors) {
+            return colors;
+        }
+    }
     if (self.delegateAppearance && [self.delegateAppearance respondsToSelector:@selector(calendar:appearance:eventColorForDate:)]) {
         UIColor *color = [self.delegateAppearance calendar:self appearance:self.appearance eventColorForDate:date];
-        return color;
+        if (color) {
+            return color;
+        }
     }
     return nil;
 }
@@ -2214,7 +2215,4 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 }
 
 @end
-
-
-
 

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DateSuger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FSCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,12 +57,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>545E10AB92FE3A245F78BC39F25DD9F0</key>
+		<key>07F3C297EC9CD24DDA43EED0F1003734</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>600DA5EA684363FAE2EA1EDC0A4A6EA7</key>
+		<key>2C8AA1BAF35413BDB954A1DF93576ED1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5427F0F4F2A5D0CBA1A90963E8751E09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5967ECDE26495B3FACBCBC678A73ADD8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C026F2015E7F3873D3788F1BD9AE588</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,22 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E2ECCF636F30F47CA31F4C2DC423C2C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AC5C84BC2F641E1CCA28A64FA32C74D2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B0214E86E9E229E292863BC821997C4D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B02537F085B5C4EF15E462C398DB005B</key>
+		<key>B1384FB5E5AB2E02317AB134B2BF8CE0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

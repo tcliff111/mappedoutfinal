@@ -20,17 +20,21 @@ class Event: NSObject {
     var descript: String?
     var location: CLLocation?
     var attendanceCount: Int? = 0
-//    var usersAttending: [String]?
+    var usersAttending: [String] = []
+    var address: String?
     
     //Should be UIImage.  Store in Parse as PFFile
-//    var picture: PFImageView?
-    var date: NSDate?
+    var picture: UIImage?
+    var startDate: NSDate?
+    var endDate: NSDate?
     var id: String?
     var isPublic: Bool? = true
-    var inviteID: String? = "empty"
+    var owner : User?
     
     init(event: PFObject) {
         super.init()
+        self.id = event.objectId
+        
         self.name = event["name"] as? String
         self.ownerName = event["ownerName"] as? String
         self.ownerID = event["ownerID"] as? String
@@ -38,37 +42,43 @@ class Event: NSObject {
         let loc = event["location"] as? PFGeoPoint
         self.location = CLLocation(latitude: (loc?.latitude)!, longitude: (loc?.longitude)!)
         self.attendanceCount =  event["attendanceCount"] as? Int
-//        self.usersAttending = event["usersAttending"] as? [String]
-//        self.picture = event["picture"] as? PFImageView
-        self.date = event["date"] as? NSDate
-        self.id = event["id"] as? String
-        self.isPublic = event["isPublic"] as? Bool
+        self.address = event["address"] as? String
         
-        //Still need inviteID
+        let attendingUsers = event["usersAttending"] as? [String]
+        if(attendingUsers != nil) {
+            self.usersAttending = attendingUsers!
+        }
+        let eventPicture = event["picture"] as? UIImage
+        if(eventPicture != nil) {
+            self.picture = eventPicture
+        }
+        self.startDate = event["date"] as? NSDate
+        self.endDate = event["endDate"] as? NSDate
+        self.isPublic = event["isPublic"] as? Bool
     }
-//    init(name: String?, owner: User, description: String?, location: CLLocation?, picture: PFImageView?, date: NSDate?, isPublic: Bool) {
-    init(name: String?, owner: User, description: String?, location: CLLocation?, date: NSDate?, isPublic: Bool) {
-
+    init(name: String?, owner: User, description: String?, location: CLLocation?, picture: UIImage?, startDate: NSDate?, endDate: NSDate?, isPublic: Bool, address: String?) {
         super.init()
         self.name = name
         self.ownerName = owner.name
-        self.ownerID = owner.id
-//        self.usersAttending?.append(owner.id!)
+        self.ownerID = owner.objectId
+        self.usersAttending.append(owner.objectId!)
         self.descript = description
+        self.address = address
         self.location = location
-//        self.picture = picture
-        self.date = date
+        self.picture = picture
+        self.startDate = startDate
+        self.endDate = endDate
         self.isPublic = isPublic
-        self.attendanceCount!+=1
-        Event.postEvent(self) { (success: Bool, error: NSError?) -> Void in
-            if(success) {
-                //Still must setup id and inviteID
-                print("success")
-            }
+        self.attendanceCount! += 1
+        Event.postEvent(self) { (eventObj: PFObject) -> () in
+            self.id = eventObj.objectId
+            let owner = User()
+            owner.addAttendingEvents(self.id!)
+            print(self.id)
         }
     }
     
-    class func postEvent(inputEvent: Event, withCompletion completion: PFBooleanResultBlock?) {
+    class func postEvent(inputEvent: Event, success: (PFObject)->()) {
         // Create Parse object PFObject
         let event = PFObject(className: "Event")
         
@@ -79,18 +89,29 @@ class Event: NSObject {
         event["ownerID"] = inputEvent.ownerID
         event["description"] = inputEvent.descript
         event["attendanceCount"] = inputEvent.attendanceCount
-//        event["usersAttending"] = inputEvent.usersAttending
-//        event["picture"] = inputEvent.picture
-        event["date"] = inputEvent.date
-//        event["id"] = inputEvent.id
+        event["usersAttending"] = inputEvent.usersAttending
+        if(inputEvent.picture != nil) {
+            event["picture"] = getPFFileFromImage(inputEvent.picture!)
+        }
+        
+        event["address"] = inputEvent.address
+        event["date"] = inputEvent.startDate
+        event["endDate"] = inputEvent.endDate
         event["isPublic"] = inputEvent.isPublic
-        event["inviteID"] = inputEvent.inviteID
         
         let point = PFGeoPoint(location: inputEvent.location)
         event["location"] = point
         
+        
         // Save object (following function will save the object in Parse asynchronously)
-        event.saveInBackgroundWithBlock(completion)
+        event.saveInBackgroundWithBlock { (done: Bool, error: NSError?) -> Void in
+            if(done) {
+                success(event)
+                print("create success")
+                PFUser.currentUser()?.fetchInBackground()
+                //                NSNotificationCenter.defaultCenter().postNotificationName(userDidCreatenewNotification, object: nil)
+            }
+        }
     }
     
     class func getNearbyEvents(currentLocation: CLLocation, orderBy: String, success: ([Event])->()) {
@@ -115,6 +136,26 @@ class Event: NSObject {
         }
     }
     
+    class func getEventsbyIDs(ids:[String],orderBy:String,success:([Event])->()){
+        let query = PFQuery(className: "Event")
+        query.whereKey("_id", containedIn: ids)
+        query.orderByDescending(orderBy)
+        
+        query.findObjectsInBackgroundWithBlock { (events:[PFObject]?, error: NSError?) in
+            if let events = events {
+                var eventsArray: [Event] = []
+                for event in events {
+                    eventsArray.append(Event(event: event))
+                }
+                
+                success(eventsArray)
+                
+            } else {
+                print(error)
+            }
+        }
+    }
+    
     class func deleteEvent(event: Event, success: ()->()) {
         let query = PFQuery(className: "Event")
         //Also must delete event from any Events arrays
@@ -132,7 +173,26 @@ class Event: NSObject {
     class func addAttendee(user: User, event: Event) {
         //Does not account for the user side
         event.attendanceCount! += 1
-//        event.usersAttending?.append(user.id!)
+        event.usersAttending.append(user.objectId!)
+    }
+    
+    
+    /**
+     Method to convert UIImage to PFFile
+     
+     - parameter image: Image that the user wants to upload to parse
+     
+     - returns: PFFile for the the data in the image
+     */
+    class func getPFFileFromImage(image: UIImage?) -> PFFile? {
+        // check if image is not nil
+        if let image = image {
+            // get image data and check if that is not nil
+            if let imageData = UIImagePNGRepresentation(image) {
+                return PFFile(name: "image.png", data: imageData)
+            }
+        }
+        return nil
     }
     
 }

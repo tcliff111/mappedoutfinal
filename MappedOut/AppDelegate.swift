@@ -8,6 +8,8 @@
 
 import UIKit
 import Parse
+import GoogleMaps
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+
+        
+        let userNotificationTypes: UIUserNotificationType = [.Alert, .Badge, .Sound]
+        let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
+        application.registerUserNotificationSettings(settings)
+        application.registerForRemoteNotifications()
+        GMSServices.provideAPIKey("AIzaSyCFa_eDQldbY_7UqCKSAVgxPCwdTW5L7Jc")
         // Override point for customization after application launch.
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.userDidLogout), name: userDidLogoutNotification, object: nil)
         Parse.initializeWithConfiguration(
@@ -24,17 +34,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "http://mappedout.herokuapp.com/parse"
             })
         )
+
         
+
         // check if user is logged in.
         if PFUser.currentUser() != nil {
+            
+            User.registerSubclass()
+            PFUser.registerSubclass()
             // if there is a logged in user then load the home view controller
             print("alreay log in")
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CoreViewController") as UIViewController
             window?.rootViewController=vc
             
         }
+        
+       
+        User.registerSubclass()
+        PFUser.registerSubclass()
+        
+
         return true
     }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        let installation = PFInstallation.currentInstallation()
+        installation.setDeviceTokenFromData(deviceToken)
+        installation.channels = ["global"]
+        installation.saveInBackground()
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        PFPush.handlePush(userInfo)
+    }
+    
     
     func userDidLogout(){
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as UIViewController

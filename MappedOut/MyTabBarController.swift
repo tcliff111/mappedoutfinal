@@ -24,7 +24,6 @@ class MyTabBarController: UITabBarController {
         // Do any additional setup after loading the view.
         for (index, viewController) in self.viewControllers!.enumerate() {
             // 声明 TabBarItem 的Image，如果没有imageWithRenderingMode方法Image只会保留轮廓
-            print(index)
             let image = UIImage(named: "Tabbar\(index)")?.imageWithRenderingMode(.AlwaysOriginal)
             let selectedImage = UIImage(named: "Tabbar\(index)sel")?.imageWithRenderingMode(.AlwaysOriginal)
             

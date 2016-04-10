@@ -21,6 +21,8 @@ class loginViewController: UIViewController,UIViewControllerTransitioningDelegat
     var Signupbutton: TKTransitionSubmitButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         Signinbutton = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         
         Signinbutton.center = CGPoint(x: self.view.bounds.width / 2,

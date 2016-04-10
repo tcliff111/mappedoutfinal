@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MappedOut/Bolts.framework"
   install_framework "Pods-MappedOut/BubbleTransition.framework"
+  install_framework "Pods-MappedOut/DateSuger.framework"
   install_framework "Pods-MappedOut/FSCalendar.framework"
   install_framework "Pods-MappedOut/Parse.framework"
   install_framework "Pods-MappedOut/ParseUI.framework"
@@ -96,6 +97,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MappedOut/Bolts.framework"
   install_framework "Pods-MappedOut/BubbleTransition.framework"
+  install_framework "Pods-MappedOut/DateSuger.framework"
   install_framework "Pods-MappedOut/FSCalendar.framework"
   install_framework "Pods-MappedOut/Parse.framework"
   install_framework "Pods-MappedOut/ParseUI.framework"
