@@ -20,4 +20,4 @@ The following **optional** features are implemented:
 - [ ] Calendar syncs to Calendar app
 
 
-![](https://github.com/lvlingsheng/Photoshare/blob/master/instagram.gif)
+![](MappedOut/mappedout3.gif)
