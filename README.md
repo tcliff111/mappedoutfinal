@@ -20,4 +20,4 @@ The following **optional** features are implemented:
 - [ ] Calendar syncs to Calendar app
 
 
-![](MappedOut/mappedout3.gif)
+![](https://github.com/CodepathGroupTomQuintinLingsheng/MappedOut/blob/master/mappedout3.gif)
