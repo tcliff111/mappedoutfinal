@@ -33,7 +33,9 @@ class User: PFUser {
         self.eventsAttending = PFUser.currentUser()?.objectForKey("eventsAttending") as? [String]
         self.eventsInvitedTo = PFUser.currentUser()?.objectForKey("eventsInvitedTo") as? [String]
         self.friendIDs = PFUser.currentUser()?.objectForKey("friendIDs") as? [String]
-        self.name = PFUser.currentUser()?.username
+        self.name = PFUser.currentUser()?.objectForKey("name") as? String
+        self.propic = PFUser.currentUser()?.objectForKey("picture") as? UIImage
+        self.username = PFUser.currentUser()?.username
         self.objectId = PFUser.currentUser()?.objectId
         self.followerIDs = PFUser.currentUser()?.objectForKey("followerIDs") as? [String]
     }
@@ -69,7 +71,7 @@ class User: PFUser {
             PFUser.currentUser()?.setObject("\(name)", forKey: "name")
         }
         if let picture = picture {
-            PFUser.currentUser()?.setObject(picture, forKey: "user")
+            PFUser.currentUser()?.setObject(picture, forKey: "picture")
         }
         
         PFUser.currentUser()?.saveInBackground()
