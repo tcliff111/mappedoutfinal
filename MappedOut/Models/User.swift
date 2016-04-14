@@ -17,7 +17,7 @@ class User: PFUser {
     //User inherits the properties username, password, and objectId from PFUser
     
     var name: String?
-    var propic: UIImage?
+    var propicFile: PFFile?
     var eventsAttending: [String]?
     var eventsInvitedTo: [String]?
     var eventsOwned: [String]?
@@ -34,7 +34,7 @@ class User: PFUser {
         self.eventsInvitedTo = PFUser.currentUser()?.objectForKey("eventsInvitedTo") as? [String]
         self.friendIDs = PFUser.currentUser()?.objectForKey("friendIDs") as? [String]
         self.name = PFUser.currentUser()?.objectForKey("name") as? String
-        self.propic = PFUser.currentUser()?.objectForKey("picture") as? UIImage
+        self.propicFile = PFUser.currentUser()?.objectForKey("picture") as? PFFile
         self.username = PFUser.currentUser()?.username
         self.objectId = PFUser.currentUser()?.objectId
         self.followerIDs = PFUser.currentUser()?.objectForKey("followerIDs") as? [String]
@@ -51,7 +51,7 @@ class User: PFUser {
     init(user: PFUser) {
         super.init()
         self.name = user.objectForKey("name") as? String
-        self.propic = user.objectForKey("picture") as? UIImage
+        self.propicFile = user.objectForKey("picture") as? PFFile
         self.eventsAttending = user.objectForKey("eventsAttending") as? [String]
         self.eventsOwned = user.objectForKey("eventOwned") as? [String]
         self.eventsInvitedTo = user.objectForKey("eventsInvitedTo") as? [String]
@@ -71,7 +71,11 @@ class User: PFUser {
             PFUser.currentUser()?.setObject("\(name)", forKey: "name")
         }
         if let picture = picture {
-            PFUser.currentUser()?.setObject(picture, forKey: "picture")
+            let file = Event.getPFFileFromImage(picture)
+            if let file = file {
+                PFUser.currentUser()?.setObject(file, forKey: "picture")
+            }
+
         }
         
         PFUser.currentUser()?.saveInBackground()
