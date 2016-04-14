@@ -24,7 +24,7 @@ class Event: NSObject {
     var address: String?
     
     //Should be UIImage.  Store in Parse as PFFile
-    var picture: UIImage?
+    var pictureFile: PFFile?
     var startDate: NSDate?
     var endDate: NSDate?
     var id: String?
@@ -48,10 +48,9 @@ class Event: NSObject {
         if(attendingUsers != nil) {
             self.usersAttending = attendingUsers!
         }
-        let eventPicture = event["picture"] as? UIImage
-        if(eventPicture != nil) {
-            self.picture = eventPicture
-        }
+        
+        self.pictureFile = event["picture"] as? PFFile
+        
         self.startDate = event["date"] as? NSDate
         self.endDate = event["endDate"] as? NSDate
         self.isPublic = event["isPublic"] as? Bool
@@ -65,7 +64,7 @@ class Event: NSObject {
         self.descript = description
         self.address = address
         self.location = location
-        self.picture = picture
+        self.pictureFile = Event.getPFFileFromImage(picture)
         self.startDate = startDate
         self.endDate = endDate
         self.isPublic = isPublic
@@ -90,9 +89,8 @@ class Event: NSObject {
         event["description"] = inputEvent.descript
         event["attendanceCount"] = inputEvent.attendanceCount
         event["usersAttending"] = inputEvent.usersAttending
-        if(inputEvent.picture != nil) {
-            event["picture"] = getPFFileFromImage(inputEvent.picture!)
-        }
+        
+        event["picture"] = inputEvent.pictureFile
         
         event["address"] = inputEvent.address
         event["date"] = inputEvent.startDate
