@@ -12,12 +12,15 @@ The following **required** functionality is completed:
 - [x] Create new events and add members to event 
 - [x] Settings page allows sharing of location services (privacy setting), logout 
 - [x] Tabs on the bottom will direct a user to different view controllers (Profile, Map View, Settings page, Search friends)
-- [ ] WashU organizations have profiles to post their events publicly
+- [Only applicable if on app store] WashU organizations have profiles to post their events publicly
 
 The following **optional** features are implemented:
 
 
 - [ ] Calendar syncs to Calendar app
+- [x] Settings View Allows users to change profile picture, cover photo
+- [x] Users have lists of friends who they have added and followers who have added them 
+- [x] Custom animations for login/logout flow
 
 
-![](https://github.com/CodepathGroupTomQuintinLingsheng/MappedOut/blob/master/mappedout3.gif)
+
